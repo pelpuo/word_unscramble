@@ -7,35 +7,45 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #125EA6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LevelsController">
    <children>
-      <Button fx:id="easy" layoutX="220.0" layoutY="169.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #6EC2D5; -fx-text-fill: #fefefe;" text="Easy (3 letters)" textFill="WHITE" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="169.0">
+      <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toLogin" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #6EC2D5; -fx-text-fill: #fefefe;" text="Back" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="medium" layoutX="220.0" layoutY="205.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #6EC2D5; -fx-text-fill: #fefefe;" text="Medium (4 letters)" textFill="WHITE">
+      <Button fx:id="easy" layoutX="230.0" layoutY="179.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #6EC2D5; -fx-text-fill: #fefefe;" text="Easy (3 letters)" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="hard" layoutX="220.0" layoutY="241.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #6EC2D5; -fx-text-fill: #fefefe;" text="Hard (5 letters)" textFill="WHITE">
+      <Button fx:id="medium" layoutX="230.0" layoutY="215.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #6EC2D5; -fx-text-fill: #fefefe;" text="Medium (4 letters)" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="sage" layoutX="220.0" layoutY="277.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #F1C918; -fx-text-fill: #fefefe;" text="Sage Mode (6+ letters)" textFill="WHITE">
+      <Button fx:id="hard" layoutX="230.0" layoutY="251.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #6EC2D5; -fx-text-fill: #fefefe;" text="Hard (5 letters)" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="veteran" layoutX="220.0" layoutY="313.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #F1C918; -fx-text-fill: #fefefe;" text="Veteran (Random)" textFill="WHITE">
+      <Button fx:id="sage" layoutX="230.0" layoutY="287.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #F1C918; -fx-text-fill: #fefefe;" text="Sage Mode (6+ letters)" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="271.0" layoutY="138.0" text="Select Level" textFill="WHITE">
+      <Button fx:id="veteran" layoutX="230.0" layoutY="323.0" mnemonicParsing="false" onAction="#toGamePage" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #F1C918; -fx-text-fill: #fefefe;" text="Veteran (Random)" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="281.0" layoutY="148.0" text="Select Level" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <Button fx:id="highScores" layoutX="526.0" layoutY="14.0" mnemonicParsing="false" onAction="#toHighScores" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #F1C918; -fx-text-fill: #fefefe;" text="High Scores" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

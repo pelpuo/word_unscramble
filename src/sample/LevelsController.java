@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class LevelsController {
 
@@ -28,8 +29,30 @@ public class LevelsController {
     }
 
 
+    public void toLogin(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
-    public void toGamePage(ActionEvent event) throws IOException {
+    public void toHighScores(ActionEvent event) throws IOException, SQLException {
+//        Parent root = FXMLLoader.load(getClass().getResource("highScores.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("highScores.fxml"));
+        root = loader.load();
+
+        HighScoresController highScoresController = loader.getController();
+        highScoresController.displayScores();
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void toGamePage(ActionEvent event) throws IOException, SQLException {
 //        Parent root = FXMLLoader.load(getClass().getResource("gamePage.fxml"));
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("gamepage.fxml"));
@@ -39,7 +62,6 @@ public class LevelsController {
 
         gamePageController.setUser(this.user);
         gamePageController.showUser(this.user);
-        gamePageController.addWord("spoon");
 
         if(event.getSource().toString().contains("easy")){
             gamePageController.setLevel(1);
@@ -53,7 +75,7 @@ public class LevelsController {
             gamePageController.setLevel(5);
         }
 
-        gamePageController.generateWord();
+        gamePageController.generateWords();
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

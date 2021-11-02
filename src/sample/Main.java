@@ -14,20 +14,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 //        Group root = new Group();
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Word Unscramble");
 
         Scene primaryScene = new Scene(root);
 
         String mainCss = getClass().getResource("application.css").toExternalForm();
         primaryScene.getStylesheets().add(mainCss);
-
-//        Text text = new Text();
-//        text.setText("Hello World");
-//        text.setX(50);
-//        text.setY(50);
-//        text.setFont(Font.font("Poppins", 32));
-//
-//        root.getChildren().add(text);
 
 
         primaryStage.setScene(primaryScene);
