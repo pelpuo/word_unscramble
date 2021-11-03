@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,27 +11,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #125EA6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpController">
    <children>
-      <Button fx:id="login" layoutX="220.0" layoutY="294.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #6EC2D5; -fx-text-fill: #fefefe;" text="Submit" textFill="WHITE" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="294.0">
+      <PasswordField fx:id="password" layoutX="220.0" layoutY="225.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" />
+      <Button fx:id="signUp" layoutX="220.0" layoutY="294.0" mnemonicParsing="false" onAction="#signUp" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #6EC2D5; -fx-text-fill: #fefefe;" text="Submit" textFill="WHITE" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="294.0">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TextField fx:id="password" layoutX="220.0" layoutY="259.0" prefHeight="30.0" prefWidth="200.0" promptText="Confirm Password" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="username" layoutX="220.0" layoutY="225.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
       <Button fx:id="to_signup" layoutX="220.0" layoutY="330.0" mnemonicParsing="false" onAction="#toLogin" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #125EA6; -fx-text-fill: #fefefe;" text="Already a player? Login HERE" textFill="WHITE" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TextField fx:id="username1" layoutX="220.0" layoutY="191.0" prefHeight="30.0" prefWidth="200.0" promptText="Username" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0">
+      <TextField fx:id="username" layoutX="220.0" layoutY="191.0" prefHeight="30.0" prefWidth="200.0" promptText="Username" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -45,5 +37,11 @@
             <Image url="@banner.png" />
          </image>
       </ImageView>
+      <Label fx:id="signUpPrompt" alignment="CENTER" layoutX="175.0" layoutY="116.0" prefHeight="39.0" prefWidth="291.0" textFill="#f1c918">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="confirmPassword" layoutX="220.0" layoutY="259.0" prefHeight="30.0" prefWidth="200.0" promptText="Confirm Password" />
    </children>
 </AnchorPane>

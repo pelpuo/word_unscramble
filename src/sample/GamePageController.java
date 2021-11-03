@@ -48,6 +48,8 @@ public class GamePageController {
     Label guessPrompt;
     @FXML
     Label tries;
+    @FXML
+    Label hintText;
 
 
     private String user;
@@ -55,6 +57,8 @@ public class GamePageController {
     private int level;
     private String currentWord;
     private int _points = 0;
+
+    private int wordPos = 0;
 
     private int _tries = 3;
 
@@ -125,11 +129,13 @@ public class GamePageController {
             guess.setText("");
             guessPrompt.setText("");
 
+            hintText.setText("");
+
             deleteWord();
 
             Random rand = new Random();
 
-            int wordPos = rand.nextInt(wordList.size());
+            wordPos = rand.nextInt(wordList.size());
             addWord(wordList.get(wordPos).getValue());
 
         }else{
@@ -190,7 +196,9 @@ public class GamePageController {
 
 
         while(resultSet.next()) {
-            Word word = new Word(resultSet.getString("word"), Integer.parseInt(resultSet.getString("level")));
+            Word word = new Word(resultSet.getString("word"),
+                    Integer.parseInt(resultSet.getString("level")),
+                    resultSet.getString("hint"));
             wordList.add(word);
 
             System.out.println(resultSet.getString("word"));
@@ -201,7 +209,7 @@ public class GamePageController {
         }else{
             Random rand = new Random();
 
-            int wordPos = rand.nextInt(wordList.size());
+            wordPos = rand.nextInt(wordList.size());
             addWord(wordList.get(wordPos).getValue());
         }
 
@@ -239,6 +247,10 @@ public class GamePageController {
             stage.show();
         }
 
+    }
+
+    public void showHint(){
+        hintText.setText(wordList.get(wordPos).getHint());
     }
 
 

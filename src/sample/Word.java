@@ -20,9 +20,20 @@ public class Word {
     private String value;
     private int level;
 
-    public Word(String value, int level){
+    public String getHint() {
+        return hint;
+    }
+
+    public void setHint(String hint) {
+        this.hint = hint;
+    }
+
+    private String hint;
+
+    public Word(String value, int level, String hint){
         this.value = value;
         this.level = level;
+        this.hint = hint;
     }
 
 
